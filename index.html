@@ -1,620 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Disciples & Pioneers | Home</title>
-    <style>
-        :root {
-            --dark: #121212;
-            --light: #f8f8f8;
-            --purple: #8A2BE2;
-            --purple-light: #9D4EDD;
-            --purple-dark: #6A0DAD;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background-color: var(--dark);
-            color: var(--light);
-            line-height: 1.6;
-        }
-
-        header {
-            background-color: rgba(0, 0, 0, 0.8);
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            border-bottom: 2px solid var(--purple);
-        }
-
-        .container {
-            width: 85%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-        }
-
-        .logo h1 {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--light);
-        }
-
-        .logo span {
-            color: var(--purple);
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-        }
-
-        .nav-links li {
-            margin-left: 2rem;
-        }
-
-        .nav-links a {
-            color: var(--light);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: var(--purple-light);
-        }
-
-        .hero {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/api/placeholder/1200/600');
-            background-size: cover;
-            background-position: center;
-            height: 80vh;
-            display: flex;
-            align-items: center;
-            text-align: center;
-        }
-
-        .hero-content {
-            width: 100%;
-        }
-
-        .hero h2 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: var(--purple);
-            color: var(--light);
-            padding: 0.75rem 2rem;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .btn:hover {
-            background-color: var(--purple-light);
-        }
-
-        .btn-outline {
-            background-color: transparent;
-            border: 2px solid var(--purple);
-            margin-left: 1rem;
-        }
-
-        .btn-outline:hover {
-            background-color: var(--purple);
-        }
-
-        .features {
-            padding: 5rem 0;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .section-title h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .section-title h2::after {
-            content: '';
-            display: block;
-            width: 100px;
-            height: 3px;
-            background-color: var(--purple);
-            margin: 1rem auto;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .feature-card {
-            background-color: rgba(255, 255, 255, 0.05);
-            padding: 2rem;
-            border-radius: 10px;
-            text-align: center;
-            transition: transform 0.3s;
-            border-bottom: 3px solid var(--purple);
-        }
-
-        .feature-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .feature-icon {
-            font-size: 2.5rem;
-            color: var(--purple);
-            margin-bottom: 1rem;
-        }
-
-        .feature-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .latest-studies {
-            padding: 5rem 0;
-            background-color: rgba(255, 255, 255, 0.02);
-        }
-
-        .studies-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .study-card {
-            background-color: rgba(0, 0, 0, 0.3);
-            border-radius: 10px;
-            overflow: hidden;
-            transition: transform 0.3s;
-        }
-
-        .study-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .study-image {
-            height: 200px;
-            background-color: #333;
-            position: relative;
-        }
-
-        .study-content {
-            padding: 1.5rem;
-        }
-
-        .study-date {
-            color: var(--purple-light);
-            font-size: 0.9rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .study-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-        }
-
-        .study-card p {
-            margin-bottom: 1rem;
-            font-size: 0.95rem;
-            color: #ccc;
-        }
-
-        .read-more {
-            color: var(--purple);
-            text-decoration: none;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-        }
-
-        .read-more:hover {
-            color: var(--purple-light);
-        }
-
-        .devotional {
-            padding: 5rem 0;
-            text-align: center;
-        }
-
-        .verse {
-            font-size: 1.8rem;
-            max-width: 800px;
-            margin: 0 auto 2rem;
-            line-height: 1.4;
-            font-style: italic;
-        }
-
-        .verse-reference {
-            color: var(--purple);
-            font-weight: 600;
-            font-size: 1.2rem;
-        }
-
-        .newsletter {
-            padding: 5rem 0;
-            background-color: rgba(138, 43, 226, 0.1);
-        }
-
-        .newsletter-content {
-            max-width: 600px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .newsletter h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .newsletter p {
-            margin-bottom: 2rem;
-        }
-
-        .newsletter-form {
-            display: flex;
-            margin-top: 2rem;
-        }
-
-        .newsletter-form input {
-            flex: 1;
-            padding: 0.75rem 1rem;
-            border: none;
-            border-radius: 5px 0 0 5px;
-            background-color: rgba(255, 255, 255, 0.1);
-            color: var(--light);
-            border: 1px solid var(--purple-dark);
-        }
-
-        .newsletter-form input::placeholder {
-            color: #aaa;
-        }
-
-        .newsletter-form button {
-            padding: 0.75rem 1.5rem;
-            background-color: var(--purple);
-            color: var(--light);
-            border: none;
-            border-radius: 0 5px 5px 0;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .newsletter-form button:hover {
-            background-color: var(--purple-light);
-        }
-
-        footer {
-            background-color: rgba(0, 0, 0, 0.8);
-            padding: 3rem 0;
-            border-top: 2px solid var(--purple);
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-        }
-
-        .footer-logo h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .footer-logo span {
-            color: var(--purple);
-        }
-
-        .footer-links h4 {
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-            color: var(--purple-light);
-        }
-
-        .footer-links ul {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 0.5rem;
-        }
-
-        .footer-links a {
-            color: #ccc;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .footer-links a:hover {
-            color: var(--purple-light);
-        }
-
-        .social-links {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        .social-links a {
-            color: var(--light);
-            font-size: 1.2rem;
-            transition: color 0.3s;
-        }
-
-        .social-links a:hover {
-            color: var(--purple);
-        }
-
-        .copyright {
-            margin-top: 2rem;
-            text-align: center;
-            color: #aaa;
-            font-size: 0.9rem;
-        }
-
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-            
-            .hero h2 {
-                font-size: 2.2rem;
-            }
-            
-            .verse {
-                font-size: 1.4rem;
-            }
-            
-            .newsletter-form {
-                flex-direction: column;
-            }
-            
-            .newsletter-form input {
-                border-radius: 5px;
-                margin-bottom: 1rem;
-            }
-            
-            .newsletter-form button {
-                border-radius: 5px;
-            }
-        }
-    </style>
+    <title>Disciples & Pioneers</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header>
         <div class="container">
-            <nav class="navbar">
-                <div class="logo">
-                    <h1>Disciples & <span>Pioneers</span></h1>
-                </div>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="bible-studies.html">Bible Studies</a></li>
-                    <li><a href="devotionals.html">Devotionals</a></li>
-                    <li><a href="resources.html">Resources</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+            <h1>Disciples & Pioneers</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#biblestudies">Bible Studies</a></li>
+                    <li><a href="#featured">Featured Passage</a></li>
+                    <li><a href="#community">Community Highlights</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section class="hero">
-        <div class="container hero-content">
-            <h2>Walking the Path of Christ</h2>
-            <p>Join our community of disciples as we explore God's Word, grow in faith, and pioneer a Christ-centered life in today's world.</p>
-            <a href="bible-studies.html" class="btn">Today's Study</a>
-            <a href="about.html" class="btn btn-outline">Learn More</a>
-        </div>
-    </section>
+    <main class="container">
+        <section id="home">
+            <h2>Welcome to Disciples & Pioneers</h2>
+            <p>Your daily resource for Bible studies, reflections, and living out your faith in today's world. Join us as we explore the scriptures and grow together in our journey as followers of Christ.</p>
+        </section>
 
-    <section class="features">
-        <div class="container">
-            <div class="section-title">
-                <h2>What We Offer</h2>
-                <p>Resources to strengthen your walk with Christ</p>
-            </div>
+        <section id="biblestudies">
+            <h2>Daily Bible Study</h2>
+            <article>
+                <h3>Today’s Study: <em>[Bible Passage Here]</em></h3>
+                <p>[Brief Introduction to the passage]</p>
+                <ul>
+                    <li><strong>Context:</strong> [Context of the passage]</li>
+                    <li><strong>Key Verse:</strong> [Key verse or verses]</li>
+                    <li><strong>Reflection:</strong> [Thoughts and reflections on the passage]</li>
+                    <li><strong>Application:</strong> [How to apply the study in daily life]</li>
+                </ul>
+                <button type="button" onclick="alert('Coming Soon!')">Download PDF</button>
+            </article>
+        </section>
 
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">📖</div>
-                    <h3>Daily Bible Studies</h3>
-                    <p>Dive deep into Scripture with our daily Bible studies, designed to help you understand and apply God's Word to your life.</p>
-                </div>
+        <section id="featured">
+            <h2>Featured Passage of the Week</h2>
+            <blockquote>
+                <p>"For I know the plans I have for you," declares the Lord, "plans to prosper you and not to harm you, plans to give you hope and a future." - Jeremiah 29:11</p>
+            </blockquote>
+            <p>This week's featured passage reminds us of God's faithfulness and His plans for our lives. Reflect on how this can apply to your situation today.</p>
+        </section>
 
-                <div class="feature-card">
-                    <div class="feature-icon">🙏</div>
-                    <h3>Prayer Guides</h3>
-                    <p>Learn how to deepen your prayer life and connect with God through our comprehensive prayer guides and resources.</p>
-                </div>
+        <section id="community">
+            <h2>Community Highlights</h2>
+            <article>
+                <h3>Testimony: [Name]</h3>
+                <p>[Brief testimony of a community member about how their faith journey has impacted their life or community]</p>
+            </article>
+            <article>
+                <h3>Upcoming Events:</h3>
+                <ul>
+                    <li>Prayer Meeting - [Date & Time]</li>
+                    <li>Weekly Fellowship - [Date & Time]</li>
+                    <li>Bible Study Group - [Date & Time]</li>
+                </ul>
+            </article>
+        </section>
 
-                <div class="feature-card">
-                    <div class="feature-icon">👥</div>
-                    <h3>Community Connection</h3>
-                    <p>Connect with fellow believers, share insights, and grow together in our community discussion forums.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Disciples & Pioneers is a community dedicated to living out the teachings of Jesus Christ. Our mission is to support each other through daily studies, shared experiences, and a commitment to growing in faith together. We are passionate about making the Word of God accessible and relevant for everyday life.</p>
+        </section>
 
-    <section class="latest-studies">
-        <div class="container">
-            <div class="section-title">
-                <h2>Latest Bible Studies</h2>
-                <p>Explore recent teachings and insights</p>
-            </div>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
 
-            <div class="studies-grid">
-                <div class="study-card">
-                    <div class="study-image">
-                        <img src="/api/placeholder/400/200" alt="Bible Study">
-                    </div>
-                    <div class="study-content">
-                        <div class="study-date">April 15, 2025</div>
-                        <h3>The Sermon on the Mount: Living the Kingdom Life</h3>
-                        <p>Exploring Jesus' teachings about the Kingdom of God and how we can apply these principles in our daily lives.</p>
-                        <a href="#" class="read-more">Read More →</a>
-                    </div>
-                </div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
 
-                <div class="study-card">
-                    <div class="study-image">
-                        <img src="/api/placeholder/400/200" alt="Bible Study">
-                    </div>
-                    <div class="study-content">
-                        <div class="study-date">April 14, 2025</div>
-                        <h3>Faith That Moves Mountains: Lessons from Hebrews 11</h3>
-                        <p>Understanding the faith of the biblical heroes and how we can cultivate a similar faith in our modern world.</p>
-                        <a href="#" class="read-more">Read More →</a>
-                    </div>
-                </div>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
 
-                <div class="study-card">
-                    <div class="study-image">
-                        <img src="/api/placeholder/400/200" alt="Bible Study">
-                    </div>
-                    <div class="study-content">
-                        <div class="study-date">April 13, 2025</div>
-                        <h3>The Fruit of the Spirit: Cultivating Character</h3>
-                        <p>Examining Galatians 5 and the characteristics that should mark the life of every follower of Christ.</p>
-                        <a href="#" class="read-more">Read More →</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
 
-    <section class="devotional">
-        <div class="container">
-            <div class="section-title">
-                <h2>Daily Verse</h2>
-                <p>Let God's Word inspire your day</p>
-            </div>
-            <div class="verse">
-                "Trust in the LORD with all your heart and lean not on your own understanding; in all your ways submit to him, and he will make your paths straight."
-            </div>
-            <div class="verse-reference">Proverbs 3:5-6</div>
-        </div>
-    </section>
-
-    <section class="newsletter">
-        <div class="container">
-            <div class="newsletter-content">
-                <h2>Stay Connected</h2>
-                <p>Subscribe to receive daily Bible studies, devotionals, and updates straight to your inbox.</p>
-                <form class="newsletter-form">
-                    <input type="email" placeholder="Your email address" required>
-                    <button type="submit">Subscribe</button>
-                </form>
-            </div>
-        </div>
-    </section>
+    </main>
 
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <h3>Disciples & <span>Pioneers</span></h3>
-                    <p>Helping believers grow in faith and lead Christ-centered lives in today's world.</p>
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook">F</a>
-                        <a href="#" aria-label="Instagram">I</a>
-                        <a href="#" aria-label="YouTube">Y</a>
-                        <a href="#" aria-label="Twitter">T</a>
-                    </div>
-                </div>
-
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="bible-studies.html">Bible Studies</a></li>
-                        <li><a href="devotionals.html">Devotionals</a></li>
-                        <li><a href="resources.html">Resources</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-links">
-                    <h4>Resources</h4>
-                    <ul>
-                        <li><a href="#">Prayer Guides</a></li>
-                        <li><a href="#">Bible Reading Plans</a></li>
-                        <li><a href="#">Study Tools</a></li>
-                        <li><a href="#">Recommended Books</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-links">
-                    <h4>About Us</h4>
-                    <ul>
-                        <li><a href="about.html">Our Mission</a></li>
-                        <li><a href="about.html#statement-of-faith">Statement of Faith</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                        <li><a href="privacy.html">Privacy Policy</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="copyright">
-                <p>&copy; 2025 Disciples & Pioneers. All rights reserved.</p>
-            </div>
+            <p>&copy; 2023 Disciples & Pioneers | <a href="#privacy-policy">Privacy Policy</a> | <a href="#terms-of-service">Terms of Service</a></p>
         </div>
     </footer>
 
-    <script>
-        // JavaScript for future interactivity
-        document.addEventListener('DOMContentLoaded', function() {
-            // You can add more functionality here as needed
-            console.log('Disciples & Pioneers website loaded successfully!');
-            
-            // Example: Update the daily verse (in a real site, this would come from a database)
-            const verses = [
-                {text: "For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life.", reference: "John 3:16"},
-                {text: "I can do all this through him who gives me strength.", reference: "Philippians 4:13"},
-                {text: "Be strong and courageous. Do not be afraid; do not be discouraged, for the LORD your God will be with you wherever you go.", reference: "Joshua 1:9"}
-            ];
-            
-            // This is just placeholder functionality
-            // In a production site, you'd have a backend system to manage content
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
+
 </html>
