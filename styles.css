@@ -1,0 +1,145 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Dark background */
+    color: #ffffff; /* White text */
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    background-color: #1a1a1a; /* Darker header background */
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    color: #5e35b1; /* Purple accent */
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #bb86fc; /* Lighter purple link */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #5e35b1; /* Darker purple on hover */
+}
+
+/* Main Content */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-decoration: underline;
+    color: #5e35b1; /* Purple accent */
+}
+
+/* Article Styles */
+article {
+    background-color: #1f1f1f; /* Slightly lighter background for articles */
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+article h3 {
+    margin-bottom: 10px;
+}
+
+blockquote {
+    border-left: 3px solid #5e35b1; /* Purple left border */
+    padding-left: 15px;
+    margin: 20px 0;
+    color: #bb86fc; /* Light purple for blockquote text */
+}
+
+/* Form Styles */
+form {
+    background-color: #1f1f1f; /* Form background */
+    padding: 20px;
+    border-radius: 5px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #5e35b1; /* Purple border */
+    border-radius: 5px;
+    background-color: #2a2a2a; /* Dark background for inputs */
+    color: #ffffff; /* White text */
+}
+
+form button {
+    background-color: #5e35b1; /* Purple button */
+    color: #ffffff; /* Button text color */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #bb86fc; /* Lighter purple on hover */
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #1a1a1a; /* Dark footer background */
+}
+
+footer p {
+    color: #bbbbbb;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    nav ul li {
+        display: block; /* Stack navigation items on small screens */
+        margin: 10px 0;
+    }
+
+    form input, form textarea {
+        font-size: 1em; /* Increase size of form inputs */
+    }
+}
