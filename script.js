@@ -114,4 +114,4 @@ const observeElements = () => {
 };
 
 // Initialize animations when DOM is loaded
-document.addEventListener('DOMContentLoaded', observeElements);
+document.addEventListener('DOMContentLoaded', observeElements); 
