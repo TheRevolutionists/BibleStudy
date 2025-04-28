@@ -6,6 +6,164 @@
     <title>Bible Study - April 20, 2025 - James 1</title>
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Additional styles for the study page */
+        .study-header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .study-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .session-info {
+            background-color: var(--light-bg);
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .session-info p {
+            text-align: center;
+            padding: 1rem;
+            background-color: var(--white);
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .scripture-section {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .scripture-section h2 {
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+
+        .verse-analysis {
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background-color: var(--light-bg);
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .verse-analysis:hover {
+            transform: translateY(-5px);
+        }
+
+        .verse-analysis h3 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .verse-text {
+            font-size: 1.2rem;
+            color: var(--text-color);
+            margin: 1.5rem 0;
+            padding: 1.5rem;
+            background-color: var(--white);
+            border-radius: 8px;
+            font-style: italic;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            line-height: 1.8;
+        }
+
+        .soap-analysis {
+            background-color: var(--white);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 1.5rem;
+        }
+
+        .soap-analysis h4 {
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .soap-analysis p {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .soap-analysis strong {
+            color: var(--primary-color);
+        }
+
+        .study-notes {
+            margin-top: 3rem;
+            padding: 2rem;
+            background-color: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .study-notes h3 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            text-align: center;
+            font-size: 1.8rem;
+        }
+
+        .study-notes ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .study-notes li {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background-color: var(--light-bg);
+            border-radius: 8px;
+            position: relative;
+            padding-left: 2.5rem;
+        }
+
+        .study-notes li:before {
+            content: "•";
+            color: var(--secondary-color);
+            font-size: 1.5rem;
+            position: absolute;
+            left: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .study-header h1 {
+                font-size: 2rem;
+            }
+
+            .session-info {
+                grid-template-columns: 1fr;
+            }
+
+            .verse-analysis {
+                padding: 1.5rem;
+            }
+
+            .verse-text {
+                font-size: 1.1rem;
+                padding: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar">
@@ -28,13 +186,16 @@
 
     <main class="subpage">
         <section class="content-section study-session">
-            <h1>Bible Study Session: April 20, 2025</h1>
+            <div class="study-header">
+                <h1>Bible Study Session: April 20, 2025</h1>
+                <p>Join us as we explore James Chapter 1</p>
+            </div>
             
             <div class="session-info">
-                <p><strong>Date:</strong> Saturday, 6:00 PM EST</p>
-                <p><strong>Peak Attendance:</strong> 26</p>
-                <p><strong>Scripture:</strong> James 1</p>
-                <p><strong>Study Notes:</strong> The word err. To go astray, to wander.</p>
+                <p><strong><i class="far fa-calendar"></i> Date:</strong><br>Saturday, 6:00 PM EST</p>
+                <p><strong><i class="fas fa-users"></i> Peak Attendance:</strong><br>26</p>
+                <p><strong><i class="fas fa-book-open"></i> Scripture:</strong><br>James 1</p>
+                <p><strong><i class="fas fa-pencil-alt"></i> Study Notes:</strong><br>The word err. To go astray, to wander.</p>
             </div>
 
             <div class="scripture-section">
