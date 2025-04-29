@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bible Study - April 26, 2025 - James 2</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Additional styles for the study page */
+        .study-header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .study-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .session-info {
+            background-color: var(--light-bg);
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .session-info p {
+            text-align: center;
+            padding: 1rem;
+            background-color: var(--white);
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .scripture-section {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .scripture-section h2 {
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+
+        .verse-analysis {
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background-color: var(--light-bg);
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+            border: 1px solid var(--border-color);
+        }
+
+        .verse-analysis:hover {
+            transform: translateY(-5px);
+        }
+
+        .verse-text {
+            font-size: 1.2rem;
+            color: var(--text-color);
+            margin: 1.5rem 0;
+            padding: 1.5rem;
+            background-color: var(--white);
+            border-radius: 8px;
+            font-style: italic;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            line-height: 1.8;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .soap-analysis {
+            background-color: var(--white);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 1.5rem;
+        }
+
+        .soap-analysis h4 {
+            color: var(--accent-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .soap-analysis p {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .soap-analysis strong {
+            color: var(--primary-color);
+        }
+
+        .study-notes, .worship-section {
+            margin-top: 3rem;
+            padding: 2rem;
+            background-color: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .study-notes h3, .worship-section h3 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            text-align: center;
+            font-size: 1.8rem;
+        }
+
+        .study-notes ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .study-notes li {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background-color: var(--light-bg);
+            border-radius: 8px;
+            position: relative;
+            padding-left: 2.5rem;
+        }
+
+        .study-notes li:before {
+            content: "•";
+            color: var(--accent-color);
+            font-size: 1.5rem;
+            position: absolute;
+            left: 1rem;
+        }
+
+        .worship-section .song {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            background-color: var(--light-bg);
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .worship-section .song i {
+            color: var(--accent-color);
+            font-size: 1.5rem;
+            margin-right: 1rem;
+        }
+
+        .discussion-topics {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background-color: var(--highlight);
+            border-radius: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .study-header h1 {
+                font-size: 2rem;
+            }
+
+            .session-info {
+                grid-template-columns: 1fr;
+            }
+
+            .verse-analysis {
+                padding: 1.5rem;
+            }
+
+            .verse-text {
+                font-size: 1.1rem;
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-book-bible"></i>
+            <span>Bible Study Group</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#schedule">Schedule</a></li>
+            <li><a href="../index.html#resources" class="active">Resources</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <main class="subpage">
+        <section class="content-section study-session">
+            <div class="study-header">
+                <h1>Bible Study Session: April 26, 2025</h1>
+                <p>Join us as we explore James Chapter 2:1-9</p>
+            </div>
+            
+            <div class="session-info">
+                <p><strong><i class="far fa-calendar"></i> Date:</strong><br>Saturday, 6:00 PM EST</p>
+                <p><strong><i class="fas fa-users"></i> Peak Attendance:</strong><br>21</p>
+                <p><strong><i class="fas fa-book-open"></i> Scripture:</strong><br>James 2:1-9</p>
+                <p><strong><i class="fas fa-pencil-alt"></i> Theme:</strong><br>Favoritism and Love</p>
+            </div>
+
+            <div class="worship-section">
+                <h3>Worship Songs</h3>
+                <div class="song">
+                    <i class="fas fa-music"></i>
+                    <span>Trust in God - Elevation Worship</span>
+                </div>
+            </div>
+
+            <div class="scripture-section">
+                <h2>Scripture Study</h2>
+
+                <div class="verse-analysis">
+                    <h3>James 2:1-4 KJV</h3>
+                    <div class="verse-text">
+                        "My brethren, have not the faith of our Lord Jesus Christ, the Lord of glory, with respect of persons. For if there come unto your assembly a man with a gold ring, in goodly apparel, and there come in also a poor man in vile raiment; And ye have respect to him that weareth the gay clothing, and say unto him, Sit thou here in a good place; and say to the poor, Stand thou there, or sit here under my footstool: Are ye not then partial in yourselves, and are become judges of evil thoughts?"
+                    </div>
+                    <div class="soap-analysis">
+                        <h4>SOAP Analysis</h4>
+                        <p><strong>Scripture:</strong> James 2:1-4</p>
+                        <p><strong>Observation:</strong> James addresses the issue of showing favoritism based on wealth and social status within the church community. He provides a practical example of discriminating between a rich and poor person in seating arrangements.</p>
+                        <p><strong>Application:</strong> We must examine our own hearts and actions to ensure we treat all people equally, regardless of their social or economic status. This applies in our church gatherings and daily interactions.</p>
+                        <p><strong>Prayer:</strong> Lord, help us to see others as You see them, with equal value and dignity as bearers of Your image.</p>
+                    </div>
+                </div>
+
+                <div class="verse-analysis">
+                    <h3>James 2:5-7 KJV</h3>
+                    <div class="verse-text">
+                        "Hearken, my beloved brethren, Hath not God chosen the poor of this world rich in faith, and heirs of the kingdom which he hath promised to them that love him? But ye have despised the poor. Do not rich men oppress you, and draw you before the judgment seats? Do not they blaspheme that worthy name by the which ye are called?"
+                    </div>
+                    <div class="soap-analysis">
+                        <h4>SOAP Analysis</h4>
+                        <p><strong>Scripture:</strong> James 2:5-7</p>
+                        <p><strong>Observation:</strong> God often chooses those who are poor in worldly terms but rich in faith. James points out the irony of favoring the wealthy who may be the very ones who oppress believers.</p>
+                        <p><strong>Application:</strong> We should value spiritual wealth over material wealth and recognize that God's kingdom operates on different principles than the world's system.</p>
+                        <p><strong>Prayer:</strong> Father, give us wisdom to value what You value and to see the spiritual riches in all people.</p>
+                    </div>
+                </div>
+
+                <div class="verse-analysis">
+                    <h3>James 2:8-9 KJV</h3>
+                    <div class="verse-text">
+                        "If ye fulfil the royal law according to the scripture, Thou shalt love thy neighbour as thyself, ye do well: But if ye have respect to persons, ye commit sin, and are convinced of the law as transgressors."
+                    </div>
+                    <div class="soap-analysis">
+                        <h4>SOAP Analysis</h4>
+                        <p><strong>Scripture:</strong> James 2:8-9</p>
+                        <p><strong>Observation:</strong> James identifies favoritism as sin, contrasting it with the royal law of loving your neighbor as yourself. This shows that discrimination violates God's fundamental command of love.</p>
+                        <p><strong>Application:</strong> We must actively practice loving all people equally, recognizing that showing favoritism is not just a social faux pas but a sin against God's law of love.</p>
+                        <p><strong>Prayer:</strong> Holy Spirit, help us to love others as Christ loves us, without partiality or prejudice.</p>
+                    </div>
+                </div>
+
+                <div class="study-notes">
+                    <h3>Key Insights & Discussion Topics</h3>
+                    <ul>
+                        <li>Slow to speak, quick to listen. Meditate on the word!</li>
+                        <li>Showing favoritism based on class is not only immoral but an insult to people made in God's image</li>
+                        <li>Christ taught love, not discrimination</li>
+                        <li>Discussion on secular music and sin</li>
+                    </ul>
+
+                    <div class="discussion-topics">
+                        <p><strong>Special Note:</strong> One thing that really sits in the back of my mind with this section, not only is it immoral to show favoritism based on class, but it also is an insult to people made in God's image. It is not what Christ taught, which is love.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Bible Study Group</h4>
+                <p>Growing together in faith and knowledge.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../index.html#schedule">Schedule</a></li>
+                    <li><a href="../index.html#resources">Resources</a></li>
+                    <li><a href="https://discord.gg/ufH8dgWy2B" target="_blank">Join our Discord</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; Bible Study Group. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html> 
