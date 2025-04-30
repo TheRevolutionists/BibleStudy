@@ -1,13 +1,15 @@
 /* Global Styles */
 :root {
-    --primary-color: #1a365d;    /* Deep navy blue */
-    --secondary-color: #718096;  /* Sophisticated slate gray */
-    --accent-color: #9f7aea;    /* Soft purple */
-    --text-color: #2d3748;      /* Dark gray for text */
-    --light-bg: #f7fafc;        /* Very light blue-gray */
+    --primary-color: #000000;    /* Black */
+    --secondary-color: #333333;  /* Dark gray */
+    --accent-color: #FFB5E8;    /* Pastel pink */
+    --accent-color-2: #B5E8FF;  /* Pastel blue */
+    --accent-color-3: #B5FFB5;  /* Pastel green */
+    --text-color: #000000;      /* Black text */
+    --light-bg: #ffffff;        /* White background */
     --white: #ffffff;
-    --highlight: #e9d8fd;       /* Light purple highlight */
-    --border-color: #e2e8f0;    /* Light gray for borders */
+    --highlight: #FFE8F7;       /* Light pink highlight */
+    --border-color: #e2e2e2;    /* Light gray for borders */
 }
 
 * {
@@ -38,6 +40,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 2px solid var(--primary-color);
 }
 
 .logo {
@@ -83,7 +86,7 @@ body {
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://source.unsplash.com/random/1920x1080/?bible,church') no-repeat center center/cover;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://source.unsplash.com/random/1920x1080/?bible,church') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -109,15 +112,15 @@ body {
 .cta-button {
     display: inline-block;
     padding: 1rem 2rem;
-    background-color: var(--secondary-color);
-    color: var(--white);
+    background-color: var(--accent-color);
+    color: var(--primary-color);
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
 .cta-button:hover {
-    background-color: #2980b9;
+    background-color: var(--accent-color-2);
 }
 
 /* Schedule Section */
@@ -670,4 +673,134 @@ footer {
 
 .session-link:hover {
     background-color: #2980b9;
+}
+
+/* Daily Verse Section */
+.daily-verse {
+    padding: 5rem 5%;
+    background-color: var(--light-bg);
+    border-bottom: 2px solid var(--border-color);
+}
+
+.daily-verse h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--primary-color);
+    font-size: 2.5rem;
+}
+
+.verse-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.verse-content {
+    background-color: var(--white);
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.verse-text {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.verse-text h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.verse-text p {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    font-style: italic;
+    line-height: 1.8;
+}
+
+.daily-prayer {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.daily-prayer h3 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.daily-prayer p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    text-align: justify;
+}
+
+.soap-analysis h3 {
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.soap-section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: var(--highlight);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.soap-section:hover {
+    transform: translateY(-5px);
+}
+
+.soap-section h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+}
+
+.soap-section h4::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: var(--accent-color);
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.soap-section p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--text-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .verse-content {
+        padding: 2rem;
+    }
+
+    .verse-text h3,
+    .daily-prayer h3,
+    .soap-analysis h3 {
+        font-size: 1.5rem;
+    }
+
+    .verse-text p {
+        font-size: 1.2rem;
+    }
+
+    .soap-section {
+        padding: 1rem;
+    }
 } 
